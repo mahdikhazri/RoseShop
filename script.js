@@ -1,3 +1,4 @@
+
 .product {
   background:white; border-radius:12px; padding:15px; text-align:center;
   box-shadow:0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;
@@ -27,4 +28,3 @@
 .cart .btn-checkout:hover { background:#e91e63; transform: scale(1.02); }
 .cart .btn-clear:hover { background:#bbb; transform: scale(1.02); }
 .totals div { display:flex; justify-content:space-between; margin:6px 0; font-size:0.9em; }
-
