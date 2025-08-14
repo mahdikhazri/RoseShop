@@ -1,49 +1,59 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mon Premier Site</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boutique RoseShop</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-    <header>
-        <h1>Bienvenue sur RoseShop !</h1>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="header">
+  <h1>🛍️ RoseShop</h1>
+  <p>Meilleur Produits et Qualité Prix</p>
+</header>
 
-    <section id="accueil">
-        <h2>Introduction</h2>
-        <p>Bienvenue sur mon site web. Je vous montre ici mes compétences et projets !</p>
-    </section>
+<main class="layout">
+  <section class="controls">
+    <input id="search" type="text" placeholder="Recherche… (Article)" />
+    <select id="category">
+      <option value="">All</option>
+      <!-- تُملأ تلقائياً -->
+    </select>
+    <select id="sort">
+      <option value="">Filtre</option>
+      <option value="price-asc">Prix croissant</option>
+      <option value="price-desc">Prix Decroissant</option>
+      <option value="name-asc">A à Z</option>
+      <option value="name-desc">Z à A</option>
+    </select>
+  </section>
 
-    <section id="services">
-        <h2>Mes Services</h2>
-        <p>Voici une liste de mes services.</p>
-    </section>
+  <section class="products" id="products">
+    <!-- تُولّد المنتجات هنا -->
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-            <input type="submit" value="Envoyer">
-        </form>
-    </section>
+  <aside class="cart" aria-label="Panier">
+    <h2>Panier</h2>
+    <ul id="cart-items"></ul>
 
-    <footer>
-        <p>&copy; 2025 Mon Site Web</p>
-    </footer>
+    <div class="totals">
+      <div><span>Totals:</span><strong><span id="total">0</span> D</strong></div>
+      <div><span>Commande:</span><strong><span id="shipping">0</span> D</strong></div>
+      <hr/>
+      <div class="grand"><span>Total TVA:</span><strong><span id="grand-total">0</span> D</strong></div>
+    </div>
 
+    <button class="btn-primary" id="checkout">إvalidé achat</button>
+    <button class="btn-ghost" id="clear-cart">Ajouter au panier</button>
+    <button class="btn-ghost" id="clear-cart">Supprimer</button>
+  </aside>
+</main>
+
+<footer class="footer">
+  <small> ©2025 RoseShop Boutique </small>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>
